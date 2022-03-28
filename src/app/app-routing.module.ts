@@ -4,12 +4,12 @@ import {GameComponent} from "./Components/game/game.component";
 import {NewComponent} from "./new/new.component";
 
 const routes: Routes = [
-  {path: 'game', component: GameComponent},
-  {path: 'new', component: NewComponent}
+  // {path: 'game', component: GameComponent},
+  {path: '', component: NewComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
